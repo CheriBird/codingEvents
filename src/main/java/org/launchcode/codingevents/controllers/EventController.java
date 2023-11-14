@@ -16,7 +16,7 @@ public class EventController {
 
     private static List<String> events = new ArrayList<>();
 
-    @GetMapping
+    @GetMapping()
     public String displayAllEvents(Model model) {
         // create an empty list, then add some names to it
 //        List<String> events = new ArrayList<>();
@@ -38,8 +38,10 @@ public class EventController {
     @PostMapping("create")
     public String createEvent(@RequestParam String eventName) {
         events.add(eventName);
-        return "redirect:";
+        return "redirect:/events";
 //        return "events/index";
     }
+
+
 
 }

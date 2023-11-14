@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
+<head th:fragment="head">
     <meta charset="UTF-8"/>
-    <title></title>
+    <title>Coding Events</title>
+
+    <script th:src="@{/script.js}"></script>
+    <link th:href="@{/styles.css}" rel="stylesheet">
+
 </head>
 <body>
 
-<h1 th:fragment="styledHeader" class="fancyTitle" th:text="${title}">
-    <div th:fragment="linkList">
-        <hr>
-        <a href="https://www.launchcode.org">LaunchCode</a> <br/>
-        <a href="https://www.lego.com">Play Well</a> <br/>
-        <a href="https://www.webelements.com">Other Building Blocks</a>
-    </div>
-</h1>
+<nav th:fragment="navigation">
+    <ul>
+        <li><a href="/events">All Events</a></li>
+        <li><a href="/events/create">Create Event</a></li>
+    </ul>
+</nav>
+
+<!--<h1 th:fragment="styledHeader" class="fancyTitle" th:text="${title}">-->
+<!--    <th:block th:fragment="linkList">-->
+<!--        <hr>-->
+<!--        <a href="https://www.launchcode.org">LaunchCode</a> <br/>-->
+<!--        <a href="https://www.lego.com">Play Well</a> <br/>-->
+<!--        <a href="https://www.webelements.com">Other Building Blocks</a>-->
+<!--    </th:block>-->
+<!--</h1>-->
+
+<!--<nav>-->
+<!--    <ul>-->
+<!--        <li><a href="/events">All Events</a></li>-->
+<!--    </ul>-->
+<!--</nav>-->
+
 
 </body>
 </html>
